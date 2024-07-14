@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <?php include '_header.php'; ?>
+    </head>
+    <body class="login-page hero-bg" style="background-image: url(./images/hero-bg.jpg);">
+        <div class="login-header box-shadow">
+            <div class="container-fluid d-flex justify-content-between align-items-center">
+                <div class="brand-logo">
+                    <a href="index.php">
+                        <img src="<?php echo $config['BASED_URL'] ?>/assets/img/AMS.png" alt="" />
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="login-wrap d-flex align-items-center flex-wrap justify-content-center">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6 col-lg-5">
+                        <div class="login-box bg-white box-shadow border-radius-10">
+                            <div class="login-title">
+                                <h2 class="text-center text-primary">Register</h2>
+                            </div>
+                            <form class="staff-register-form" action="#" method="post">
+                                <div class="admin_tenant">
+                                    <a href="register.php" class="admin">Register</a>
+                                    <a href="login.php" class="tenant">Login</a>
+                                </div>
+
+                                <div id="error-handler"></div>
+                                
+                                <input type="hidden" class="form-control form-control-lg" placeholder="Enter email." name="apiKey" value="<?php echo $config['API_KEY'] ?>">
+
+                                <div class="input-group custom">
+                                    <input type="text" class="form-control form-control-lg" placeholder="Enter email." name="email">
+                                    <div class="input-group-append custom">
+                                        <span class="input-group-text"><i class="icon-copy dw dw-user1"></i></span>
+                                    </div>
+                                </div>
+                                <div class="input-group custom">
+                                    <input type="password" class="form-control form-control-lg" placeholder="Enter password." name="password" id="password"> 
+                                    <span onclick="showPassword('password');" class="input-group-text"><i class="dw dw-eye"></i></span>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <div class="input-group mb-0">
+                                            <button type="submit" class="login_btn">Register</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-7">
+                        <!--<img src="assets/img/login-page-img.png" alt="" />-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <?php include '_footer.php'; ?>
+</body>
+</html>
